@@ -27,8 +27,8 @@ const taskSlice = createSlice({
         deleteTask(state, action) {
             state.tasks = state.tasks.filter((task, index) => task.todo[index] !== task.todo[action.payload])
         },
-        chechedTask(state, action) {
-            state.tasks = state.tasks.map((task, index) => (task.todo[index] === task.todo[action.payload]) ? task.checked === !task.checked : task.checked )
+        checkedTask(state, action) {
+            state.tasks = state.tasks.map((task, index) => (task.todo[index] === task.todo[action.payload]) ? {todo: task.todo, checked: !task.checked} : task )
         }
 
     }

@@ -15,6 +15,7 @@ export default function Text() {
   const iputTodo = (e) => {
     setInp(e.target.value)
   }
+  
   return (
     <div>
         <input placeholder='Введите задачу' value={inp} onChange={(e) => iputTodo(e)}></input>

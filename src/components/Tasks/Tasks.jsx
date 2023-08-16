@@ -11,7 +11,7 @@ export default function Tasks() {
     <div>
         {tasks.map((task, index) => (
             <div key={index}>
-              <input type="checkbox" onChange={(e) => dispatch(checkedTask(e.target.checked))}></input>
+              <input type="checkbox" onChange={(e) => dispatch(checkedTask(index))}></input>
               {task.todo}
               <button onClick={() => dispatch(deleteTask(index))}>удалить</button>
             </div>
