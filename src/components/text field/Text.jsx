@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addTask, task } from '../../storage/reducers/taskReducer'
+import { addTask, deleteCheckedTask, task } from '../../storage/reducers/taskReducer'
+import Link from '../Link/Link'
 
 export default function Text() {
   const [inp, setInp] = useState("")
@@ -20,6 +21,7 @@ export default function Text() {
     <div>
         <input placeholder='Введите задачу' value={inp} onChange={(e) => iputTodo(e)}></input>
         <button onClick={() => func()}>добавить</button>
+        <Link name={"Удалить выбранные"} make={() => dispatch(deleteCheckedTask())}/>
     </div>
   )
 }

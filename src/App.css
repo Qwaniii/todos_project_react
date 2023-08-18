@@ -24,3 +24,27 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.btn_link {
+  text-align: right;
+  padding-top: 5px;
+  font-size: 12px;
+  color: gray;
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+.btn {
+  vertical-align: sub;
+  background-color: #282c34;
+  border: none;
+  color: rgba(128, 128, 128, 0.5);
+  margin: 0 15px;
+  padding: 0 ;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  transition: all .3s;
+}
